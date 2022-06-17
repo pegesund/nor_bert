@@ -1,6 +1,6 @@
 # Language Modeling 
 
-A short summary of the project
+This project contains a Bert-model on norwegian and the code to rebuild. Feel free to reuse it.
 
 ## Getting Started
 
@@ -62,8 +62,8 @@ Before contributing, please set up the pre-commit hooks to reduce errors and ens
 
 ## Contact
 
-Wassim Seifeddine (wassim@quantumanalytica.io)
+petter.egesund@sannsyn.com
 
 ## License
 
-© Quantum Analytica
+Freebsd
