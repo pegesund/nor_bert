@@ -1,0 +1,12 @@
+dataset_file_name: sannsyn_data.txt # The name of the file in `data` dir to be used for training
+base_model_name: bert-base-multilingual-uncased # which base model to finetune.
+wwm_probability: 0.2 # percentage of words to mask during training. Original BERT uses 15%
+learning_rate: 0.00002
+weight_decay: 0.01
+batch_size: 16
+fp16: True # Use 16bit floating point numbers for forward pass. Normally this saves around 40% of memory and has minimal performance issues
+chunk_size: 512
+epochs: 120
+train_test_split_ratio: 0.2
+api_model_dir: checkpoint-33500
+
