@@ -1,31 +1,45 @@
+Metadata-Version: 2.1
+Name: language-modeling
+Version: 0.1.0
+Summary: A short summary of the project
+Home-page: UNKNOWN
+Author: Wassim Seifeddine
+Author-email: wassim@quantumanalytica.io
+License: proprietary
+Platform: any
+Requires-Python: >=3.7
+
 # Language Modeling 
 
 This project contains a Bert-model on norwegian and the code to rebuild. Feel free to reuse it.
 
-The model is in the data-directory. When checkout use Git lfs, as the file is pretty big.
-
-## Why
-
-This model works out of the box with f.eks. the sentence transfomer library.
-It is built on top of the multilingual bert.
-
 ## Getting Started
 
-```python
+To set up your local development environment, please use a fresh virtual environment.
 
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('checkpoint-33500')
-vector =  model.encode("Ibsen er en norsk forfatter som ikke var redd for litt kinnskjegg..")
+Then run:
 
+    pip install -r requirements.txt -r requirements-dev.txt
 
-```
+You can now import functions and classes from the module with `import language_modeling`.
 
-## Fine-tuning
+If you want to deploy this project as a docker container, please ensure that [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are installed, then run
 
-Bert works best when fine tuned against the relevant material.
+    docker-compose up
 
-Put data in a directory and follow the train-part in the scripts here.
+this will build the entire project with all dependencies inside a docker container. You may use the command line interface of the application now, e.g. by editing the `command` tag in the [`docker-compose.yml`](./docker-compose.yml).
 
+### Testing
+
+We use `pytest` as test framework. To execute the tests, please run
+
+    python setup.py test
+
+To run the tests with coverage information, please use
+
+    python setup.py testcov
+
+and have a look at the `htmlcov` folder, after the tests are done.
 
 ### Notebooks
 
@@ -61,8 +75,8 @@ Before contributing, please set up the pre-commit hooks to reduce errors and ens
 
 petter.egesund@sannsyn.com
 
-Thanks to Russ and Wassim for cooperation :)
-
 ## License
 
 Freebsd
+
+

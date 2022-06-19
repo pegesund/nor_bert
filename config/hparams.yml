@@ -8,5 +8,5 @@ fp16: True # Use 16bit floating point numbers for forward pass. Normally this sa
 chunk_size: 512
 epochs: 120
 train_test_split_ratio: 0.2
-api_model_dir: checkpoint-33500
+api_model_dir: /home/petter/dev/python/nor_bert/checkpoint-33500
 
