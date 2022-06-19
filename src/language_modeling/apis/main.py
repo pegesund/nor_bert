@@ -4,7 +4,7 @@ from language_modeling.util import load_hparams
 from flask import Flask, request, make_response, jsonify
 from flask_cors import CORS
 from language_modeling.util import get_default_logger
-from language_modeling.apis.helpers import make_error_object
+from Apis.helpers import make_error_object
 import json
 import numpy as np
 hparams = load_hparams()
